@@ -1,0 +1,75 @@
+<div class="rating-wrapper">
+
+    <form [formGroup]="ratingForm" (ngSubmit)="onSubmit()">
+
+        <!-- Dropdown -->
+        <h3>Validation</h3>
+        <div class="dropdown-validation">
+            <select formControlName="name">
+                <option value="" selected disabled hidden>Select name</option>
+                <option value="Jonas">Jonas</option>
+                <option value="Frederic">Frederic</option>
+                <option value="Alex">Alex</option>
+                <option value="Alex">Sven</option>
+            </select>
+            <input required value="2001-01-01" formControlName="validationDate" type="date">
+        </div>
+
+
+        <h3>Ratings</h3>
+        <div class="dropdown-rating">
+            <select formControlName="locationRating">
+                <option value="" selected disabled>Ambiente</option>
+                <option value="1">1 für Ambiente</option>
+                <option value="2">2 für Ambiente</option>
+                <option value="3">3 für Ambiente</option>
+                <option value="4">4 für Ambiente</option>
+                <option value="5">5 für Ambiente</option>
+            </select>
+
+            <select formControlName="priceRating">
+                <option value="" selected disabled>Preis/Leistung</option>
+                <option value="1">1 für Preis/Leistung</option>
+                <option value="2">2 für Preis/Leistung</option>
+                <option value="3">3 für Preis/Leistung</option>
+                <option value="4">4 für Preis/Leistung</option>
+                <option value="5">5 für Preis/Leistung</option>
+            </select>
+
+            <select formControlName="serviceRating">
+                <option value="" selected disabled>Service</option>
+                <option value="1">1 für Service</option>
+                <option value="2">2 für Service</option>
+                <option value="3">3 für Service</option>
+                <option value="4">4 für Service</option>
+                <option value="5">5 für Service</option>
+            </select>
+
+            <select formControlName="tasteRating">
+                <option value="" selected disabled>Geschmack</option>
+                <option value="1">1 für Geschmack</option>
+                <option value="2">2 für Geschmack</option>
+                <option value="3">3 für Geschmack</option>
+                <option value="4">4 für Geschmack</option>
+                <option value="5">5 für Geschmack</option>
+            </select>
+
+            <select formControlName="arrivalRating">
+                <option value="" selected disabled>Anfahrt</option>
+                <option value="1">1 für Anfahrt</option>
+                <option value="2">2 für Anfahrt</option>
+                <option value="3">3 für Anfahrt</option>
+                <option value="4">4 für Anfahrt</option>
+                <option value="5">5 für Anfahrt</option>
+            </select>
+        </div>
+
+        <!-- Required warning -->
+        @if(ratingForm.invalid) {
+        <div style="color: red;">Invalid form!</div>
+        }
+
+        <button type="submit" [disabled]="ratingForm.invalid">Submit</button>
+    </form>
+</div>
+
