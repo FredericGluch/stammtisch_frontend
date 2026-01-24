@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "deploy": "ng build --base-href https://FredericGluch.github.io/stammtisch_frontend/",
-    "ghpages": "npx angular-cli-ghpages --dir=dist/stammtisch/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "build": "ng build",
+    "deploy": "ng build --base-href /stammtisch_frontend/",
+    "ghpages": "npx angular-cli-ghpages --dir=dist/stammtisch/browser",
     "upload": "npm run deploy && npm run ghpages"
   },
   "prettier": {
@@ -22,13 +23,6 @@
       }
     ]
   },
-  "architect": {
-  "build": {
-    "options": {
-      "baseHref": "/stammtisch_frontend/"
-    }
-  }
-},
   "private": true,
   "packageManager": "npm@11.6.2",
   "dependencies": {
