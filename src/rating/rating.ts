@@ -1,13 +1,11 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.html',
   styleUrl: './rating.css',
-  standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, CommonModule]
+  standalone: false,
 })
 export class Rating implements OnInit{
 

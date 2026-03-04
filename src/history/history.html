@@ -1,0 +1,8 @@
+<div style="display: flex; justify-content: center; gap: 15px; margin-top: 15px;">
+    @for (item of historyData; track $index) {
+         <div style="height: 120px; width: 120px; background: lightgray; border-radius: 10px;">
+            <h3>{{item.location}}</h3>
+            <h3>{{item.Ambiente}}</h3>
+        </div>
+    }
+</div>
